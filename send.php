@@ -3,6 +3,8 @@
     $token = $_GET['token'];
     $message = $_GET['message'];
 
+    echo $token;
+
 	function send_notification ($tokens, $message)
 	{
 		$url = 'https://fcm.googleapis.com/fcm/send';
