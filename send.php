@@ -2,9 +2,7 @@
     
     $token = $_POST['token'];
     $message = $_POST['message'];
-
-    echo $token;
-
+//    echo $token;
 	function send_notification ($tokens, $message)
 	{
 		$url = 'https://fcm.googleapis.com/fcm/send';
@@ -29,16 +27,11 @@
            die('Curl failed: ' . curl_error($ch));
        }
        curl_close($ch);
-       //echo $result;
+       echo $result;
 	}
 
-
-
-    $tokens = array();
-    
+    $tokens = array();    
     $tokens[] = $token;
-
-    print_r $tokens;
-
+    // print_r ($tokens);
     $message = array("message" => $message);
-    //send_notification($tokens, $message);
+    send_notification($tokens, $message);
