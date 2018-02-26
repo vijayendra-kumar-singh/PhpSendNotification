@@ -1,7 +1,7 @@
 <?php 
     
-    $token = $_GET['token'];
-    $message = $_GET['message'];
+    $token = $_POST['token'];
+    $message = $_POST['message'];
 
     echo $token;
 
